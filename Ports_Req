@@ -1,0 +1,19 @@
+22 -> git over SSH -> Clone, fetch and push over SSH
+
+25 -> SMTP with encryption (STARTTLS) support
+
+80 -> HTTP -> Web application access -> requests are redirected to HTTPS when SSL is enabled.
+
+122 -> SSH - Instance shell access -> default 22 is dedicated to git+ssh network traffic
+
+161/UDP -> SNMP -> N/w monitoring protocol operation
+
+443 -> HTTPS -> web application -> git over https access
+
+1194/UDP -> VPN -> 	Secure replication network tunnel in high availability configuration
+
+8080 -> HTTP -> Plain-text web based Management Console. Not required unless SSL is disabled manually.
+
+8443 -> HTTPS -> Secure web based Management Console. Required for basic installation and configuration.
+
+9418 -> Git -> Simple Git protocol port. Clone and fetch operations to public repositories only. Unencrypted network communication.
