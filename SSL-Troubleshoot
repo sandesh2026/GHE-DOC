@@ -1,0 +1,20 @@
+Removing the passphrase from your key file
+
+Rename your original key file.
+$ mv yourdomain.key yourdomain.key.orig
+
+Generate a new key without a passphrase.
+openssl rsa -in yourdomain.key.orig -out yourdomain.key
+
+Convert to pem
+openssl rsa -in yourdomain.der -inform DER -out yourdomain.key -outform PEM
+
+Combining certificates
+cat yourdomain.com.crt bundle-certificates.crt > yourdomain.combined.crt
+
+Install untrusted certificates
+ghe-ssl-ca-certificate-install -c rootCA.crt
+
+
+
+
